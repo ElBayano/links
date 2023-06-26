@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url("./assets/assets/bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; */
+
+  /* Propriedade chamada "ShortHand" ou "Atalho"
+  background: color image repeat position/size */
+
+  background: url("/assets/assets/bg-mobile.jpg") no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+#container {
+  width: 360px;
+  margin: auto;
+  display: block;
+  margin: 56px auto 0;
+  /* border: 1px solid red; */
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  display: inline;
+  width: 112px;
+  margin: auto;
+}
+
+#profile p {
+  font-weight: 500;
+  margin-top: 8px;
+  line-height: 24px;
+}
