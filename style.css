@@ -5,17 +5,31 @@
 }
 
 :root {
-  --surface-color-dark-mode: rgba(255, 255, 255, 0.1);
-  --surface-color-dark-mode-hover: rgba(255, 255, 255, 0.05);
-  --stroke-color-dark-mode: rgba(255, 255, 255, 0.5);
-  --text-color-dark-mode: #fff;
-  --highlight-color-dark-mode: rgba(255, 255, 255, 0.2);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
 
-  --surface-color-light-mode: rgba(0, 0, 0, 0.05);
-  --surface-color-light-mode-hover: rgba(0, 0, 0, 0.02);
-  --stroke-color-light-mode: rgba(0, 0, 0, 0.5);
-  --text-color-light-mode: #000;
-  --highlight-color-light-mode: rgba(0, 0, 0, 0.1);
+  --stroke-color-hover: #fff;
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+
+  --text-color: #fff;
+
+  --social-links-hover: rgba(255, 255, 255, 0.20);
+
+  --bg-url: url("/assets/assets/bg-mobile.jpg");
+}
+
+.light {
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+
+  --stroke-color-hover: #000;
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+
+  --text-color: #000;
+
+  --social-links-hover: rgba(0, 0, 0, 0.10);
+
+  --bg-url: url("/assets/assets/bg-mobile-light.jpg");
 }
 
 body {
@@ -27,12 +41,12 @@ body {
   /* Propriedade chamada "ShortHand" ou "Atalho"
   background: color image repeat position/size */
 
-  background: url("/assets/assets/bg-mobile.jpg") no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: #fff;
+  color: var(--text-color);
 }
 
 #container {
@@ -48,19 +62,18 @@ body * {
 }
 
 #profile img {
-  display: inline;
   width: 112px;
-  margin: auto;
 }
 
 #profile p {
   font-weight: 500;
-  margin-top: 8px;
   line-height: 24px;
+  margin-top: 8px;
 }
 
 ul {
   list-style: none;
+
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -70,18 +83,18 @@ ul {
 
 ul li a {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 
-  padding: 24px 16px;
+  padding: 16px 24px;
 
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
+
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-
-  background: var(--surface-color-dark-mode);
-  border: 1px solid var(--stroke-color-dark-mode);
 
   text-decoration: none;
   font-weight: 500;
@@ -90,16 +103,15 @@ ul li a {
 }
 
 ul li a:hover {
-  background: var(--surface-color-dark-mode-hover);
-  border: 1.5px solid var(--text-color-dark-mode);
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--stroke-color);
 }
 
 #social-links {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 24px 0;
 
+  padding: 24px 0;
   font-size: 24px;
 }
 
@@ -111,8 +123,13 @@ ul li a:hover {
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 #social-links a:hover {
-  background: var(--highlight-color-dark-mode);
+  background: var(--social-links-hover);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
 }
