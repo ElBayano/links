@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --stroke-color-dark-mode: rgba(255, 255, 255, 0.50);
+  --surface-color-dark-mode: rgba(255, 255, 255, 0.10);
+}
+
 body {
   /* background-image: url("./assets/assets/bg-mobile.jpg");
   background-repeat: no-repeat;
@@ -23,8 +28,6 @@ body * {
 
 #container {
   width: 360px;
-  margin: auto;
-  display: block;
   margin: 56px auto 0;
   /* border: 1px solid red; */
 }
@@ -44,4 +47,17 @@ body * {
   font-weight: 500;
   margin-top: 8px;
   line-height: 24px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+
+ul li a {
+  border: 1px solid red;
 }
