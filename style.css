@@ -86,11 +86,10 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
-  transition: 02;
 }
 
-.light switch button {
-  right: 0;
+.light #switch button {
+  right: 0px;
   left: initial;
 }
 
